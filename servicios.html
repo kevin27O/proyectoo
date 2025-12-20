@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+    <!-- Enlace a tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/servicios.css"> 
+    <!-- Inclusión de Tailwind CSS y Google Fonts via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="img/logofitnes.png" alt="Logo Piru GYM" class="logo-img">
+            <div id="logo-text">
+                <h2>Bienvenidos</h2>
+                <p>Entrena con nosotros</p>
+            </div>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <nav class="main-nav">
+            <ul class="nav-list hidden md:flex" id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="gimnasio.html">Gimnasios</a></li>
+                <li><a href="contacto.html">Inscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <main>
+
+        
+<section class="rutina">
+    <h2 class="section-title">Nuestras Rutinas</h2>
+    <div class="rutina-grid">
+        <article class="rutina-card">
+            <img src="img/9.jpg" alt="Rutina de Fuerza">
+            <div class="card-info">
+                <h3>Fuerza Total</h3>
+                <p>Desarrolla tu musculatura con planes adaptados a tu nivel.</p>
+                <a href="contacto.html" class="btn-leer">IR</a>
+            </div>
+        </article>
+
+        <article class="rutina-card">
+            <img src="img/9.jpg" alt="Cardio Pro">
+            <div class="card-info">
+                <h3>Resistencia Cardio</h3>
+                <p>Mejora tu condición física y quema calorías de forma eficiente.</p>
+                <a href="contacto.html" class="btn-leer">IR</a>
+            </div>
+        </article>
+
+        <article class="rutina-card">
+            <img src="img/9.jpg" alt="Funcional">
+            <div class="card-info">
+                <h3>Entreno Funcional</h3>
+                <p>Movimientos naturales para una vida más activa y saludable.</p>
+                <a href="contacto.html" class="btn-leer">IR</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="instructores">
+    <h2 class="section-title">Nuestros Instructores</h2>
+    <div class="instructores-grid">
+        <article class="instructores-card">
+            <div class="img-container">
+                <img src="img/9.jpg" alt="Instructor" class="instructor-img">
+            </div>
+            <div class="card-info">
+                <h3>Coach Kevin</h3>
+                <p>Especialista en Powerlifting y nutrición deportiva.</p>
+              
+            </div>
+        </article>
+
+        <article class="instructores-card">
+            <div class="img-container">
+                <img src="img/9.jpg" alt="Instructor" class="instructor-img">
+            </div>
+
+
+            <div class="card-info">
+                <h3>Coach Maynor</h3>
+                <p>Experto en Yoga, Pilates y entrenamiento funcional.</p>
+
+            </div>
+        </article>
+    </div>
+
+   
+</section>
+
+
+     </main>
+   
+        <script src="js/script.js" defer></script>
+    <div id="pie">
+        <div id="centro-pie">
+            <center>
+                <p>
+                    &copy; Todos los Derechos Reservados <br>
+                    Diseñado por: <a href="mailto: kevin.ocgarcia@gmail.com" class="email">Tec. Campos</a> - 2025
+                </p>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

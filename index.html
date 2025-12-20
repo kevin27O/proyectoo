@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+    <!-- Enlace a tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/styleC.css">
+    <!-- Inclusión de Tailwind CSS y Google Fonts via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+
+<body>
+
+   <header class="site-header">
+    <div class="logo-container">
+        <img src="img/logofitnes.png" alt="Logo Piru GYM" class="logo-img">
+        <div id="logo-text">
+            <h2>Bienvenidos</h2>
+            <p>Entrena con nosotros</p>
+        </div>
+    </div>
+
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+
+    <nav class="main-nav">
+        <ul class="nav-list hidden md:flex" id="nav-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="gimnasio.html">Gimnasios</a></li>
+            <li><a href="contacto.html">Inscripción</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- SECCIÓN DEL CARRUSEL: -->
+    <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-gray-800">
+
+        <!-- Slides Track -->
+        <div id="carousel-track" class="carousel-track flex w-full">
+            <!-- Slide 1 -->
+            <div class="min-w-full relative h-64 md:h-96">
+                <img src="img/01.jpg" alt="Imagen 1" class="w-full h-full object-cover">
+                <div
+                    class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-1">Cardio</h2>
+                    <p class="text-gray-200 text-sm">Corre y mantiene tu cardio.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="min-w-full relative h-64 md:h-96">
+                <img src="img/02.jpg" alt="Imagen 2" class="w-full h-full object-cover">
+                <div
+                    class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-1">Cuerda</h2>
+                    <p class="text-gray-200 text-sm">Este ejercio fortalce tus brazos.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="min-w-full relative h-64 md:h-96">
+                <img src="img/03.jpg" alt="Imagen 3" class="w-full h-full object-cover">
+                <div
+                    class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-1">Pesas</h2>
+                    <p class="text-gray-200 text-sm">Ponte al limite con peso.</p>
+                </div>
+            </div>
+
+            <div class="min-w-full relative h-64 md:h-96">
+                <img src="img/4.jpg" alt="Imagen 3" class="w-full h-full object-cover">
+                <div
+                    class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+                    <h2 class="text-2xl font-bold mb-1">Saltar Cuerda</h2>
+                    <p class="text-gray-200 text-sm">Saltar no estan facíl aquí.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="prevBtn"
+            class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/10 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white rounded-full p-3 transition focus:outline-none focus:ring-2 focus:ring-white">
+            <svg xmlns="www.w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+        <button id="nextBtn"
+            class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/10 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white rounded-full p-3 transition focus:outline-none focus:ring-2 focus:ring-white">
+            <svg xmlns="www.w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+
+        <!-- Indicators -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+            <button class="indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition"
+                data-index="0"></button>
+            <button class="indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition"
+                data-index="1"></button>
+            <button class="indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition"
+                data-index="2"></button>
+           <button class="indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition"
+                data-index="3"></button>
+        </div>
+    </div>
+    <!-- FIN SECCIÓN DEL CARRUSEL -->
+
+    <main>
+        <!--contenido de la página -->
+        <section id="servicios" class="services">
+            <h2>Piru GYM Santa Ana</h2>
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>RUTINAS</h3>
+                    <br>
+                    <img src="img/7.jpg" alt="">
+                    <br>
+                    <p>Entrega tu maximo siempre.</p>
+                    <br>
+                    <br>
+                    <a href="servicios.html" class="btn-gym">RUTINAS</a>
+                </article>
+                <article class="service-card">
+                    <h3>INSTRUCTOR</h3>
+                    <br>
+                    <img src="img/6.jpg" alt="">
+                    <br>
+                    <p>Nuestros instructores te ayudaran.</p>
+                    <br>
+                    <a href="servicios.html" class="btn-gym">INSTRUCTORES</a>
+
+                </article>
+                <article class="service-card">
+                    <h3>INSTALACIONES</h3>
+                    <br>
+                    <img src="img/8.jpg" alt="">
+                    <br>
+                    <p>Contamos con equipo de alto nivel.</p>
+                    <br>
+                    <a href="gimnasio.html" class="btn-gym">CONOCENOS</a>
+                </article>
+
+                  </article>
+                <article class="service-card">
+                    <h3>INSCRIPCIÓN</h3>
+                    <br>
+                    <img src="img/9.jpg" alt="">
+                    <br>
+                    <p>Llena el formulario y entrena ya con nosotros</p>
+                    <br>
+                    <a href="contacto.html" class="btn-gym">INSCRIBETE</a>
+                </article>
+            </div>
+        </section>
+        <br><br>
+            <div class="nota">
+                <article class="nota-card">
+        <p>"EL DOLOR ES TEMPORAL, EL ORGULLO ES PARA SIEMPRE." <br>
+
+            En Piru GYM no solo transformamos cuerpos, forjamos voluntades. <br> Tu mejor versión te está esperando detrás de
+            esa última repetición. ¿Estás listo para el reto?</p>
+            
+           
+    </main>
+
+    <script src="js/script.js" defer></script>
+
+    <div id="pie">
+        <div id="centro-pie">
+            <center>
+                <p>
+                    &copy; Todos los Derechos Reservados <br>
+                    Diseñado por: <a href="mailto: kevin.ocgarcia@gmail.com" class="email">Tec. Campos</a> - 2025
+                </p>
+            </center>
+        </div>
+    </div>
+</body>
+
+</html>

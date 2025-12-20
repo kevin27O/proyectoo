@@ -1,0 +1,232 @@
+
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #000; 
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* imagen fondo */
+    background-image: url('../img/gymfondo.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; 
+    z-index: -1; 
+}
+
+/* Header Responsivo Flexbox */
+.site-header {
+    background-color: #611414;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+/* Contenedor del Logo y Texto */
+.logo-container {
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+}
+
+.logo-img {
+    height: 80px; /* Tamaño fijo para el logo */
+    width: auto;
+       max-width: 100%; 
+}
+
+#logo-text h2, #logo-text p {
+    color: #ffffff;
+}
+
+/* Navegación (Escritorio) */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #f78e05;
+}
+
+
+@media (max-width: 768px) {
+    /* Oculto por defecto en móvil, se mostrará con JS */
+    .nav-list.hidden {
+        display: none;
+    }
+    
+    .nav-list {
+        display: flex; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #611414; 
+        position: absolute;
+        top: 100px; 
+        left: 0;
+        z-index: 50;
+        padding: 1rem;
+        border-bottom: 2px solid white;
+    }
+
+    .site-header {
+        position: relative;
+    }
+}
+
+
+/* Estilos del carrusel */
+.carousel-track {
+    transition: transform 0.5s ease-in-out;
+    width: auto;
+    height: auto;
+}
+
+/* El resto de estilos generales */
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #f0f2f4;
+    margin-top: 2rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #611414;
+    padding: 1.5rem;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-card h3{
+    color: #ffffff;
+
+    }
+
+    p {
+    color: #ffffff;
+}
+
+.nota h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #f0f2f4;
+    margin-top: 2rem;
+}
+
+.nota-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.nota-card {
+    background: #611414;
+    padding: 1.5rem;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    p {
+    color: #ffffff;
+}
+
+.motivador {
+
+    width: 200px;
+    height: 20px;
+}
+
+.btn-gym {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'sans-serif'; 
+    border: 2px solid #ffffff;
+    border-radius: 50px; 
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.btn-gym:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px); 
+}
+
+/* Efecto cuando se hace clic */
+.btn-gym:active {
+    transform: translateY(-1px);
+}
+
+
+/* pie */
+#pie{
+    width: 100%;
+    height: 90px;
+    background: #611414;
+}
+
+#pie #centro-pie{
+    width: 800px; 
+    max-width: 100%; 
+    height: auto; 
+    overflow: hidden;
+    margin: auto;
+}
+
+.email{
+    color: #fff;
+    text-decoration: none;
+}

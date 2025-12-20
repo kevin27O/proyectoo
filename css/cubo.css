@@ -1,0 +1,84 @@
+*,*::after *::before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: white;
+    min-height: 100vh;
+}
+
+body, #cubo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cubo{
+    height: 60%;
+    transform-style: preserve-3d;
+    animation: rotar 7s linear infinite;
+}
+
+#cubo > span {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    border: 2px solid #611414;
+    box-shadow: inset 0px 0px 15px 5px rgba(230, 26, 3, 0.2), 0px 0px 40px 1px rgba(226, 23, 23, 0.15);
+    border-radius: 4px;
+}
+
+#cubo > span:nth-child(1){transform: rotateY(90deg)translateZ(2em);}
+#cubo > span:nth-child(2){transform: rotateY(90deg)translateZ(-2em);}
+#cubo > span:nth-child(3){transform: rotateY(90deg)translateZ(-2em);}
+#cubo > span:nth-child(4){transform: rotateY(90deg)translateZ(2em);}
+#cubo > span:nth-child(5){transform: translateZ(-2em);}
+#cubo > span:nth-child(6){transform: translateZ(2em);}
+
+@keyframes rotar {
+    0%{transform: rotateY(0deg)rotateX(0deg);}
+    50%{transform: rotateY(360deg)rotateX(360deg);}
+    100%{transform: rotateY(0deg)rotateX(0deg);}
+}
+
+#contenedor_carga{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    -webkit-transition: all 6s ease;
+    -o-transition: all 6s ease;
+    transition: all 6s ease;
+    z-index: 10000;
+}
+
+h1, p{
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+#principal{
+    height: 1000px;
+    width: 10000px;
+    border: 1px solid;
+    background: #424242;
+    margin: auto;
+}

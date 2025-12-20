@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #000; 
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* imagen */
+    background-image: url('../img/gymfondo.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; 
+    z-index: -1; 
+}
+
+/* Header Responsivo Flexbox */
+.site-header {
+    background-color: #611414;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0rem 1rem; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+/* Contenedor del Logo y Texto */
+.logo-container {
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    max-width: 100%; 
+}
+
+#logo-text h2, #logo-text p {
+    color: #ffffff;
+}
+
+/* Navegación  */
+.nav-list {
+    list-style: none;
+    display: flex; 
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #f78e05;
+}
+
+
+@media (max-width: 768px) {
+    
+    .nav-list.hidden {
+        display: none;
+    }
+    
+    .nav-list {
+        display: flex; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #611414; 
+        position: absolute;
+        top: 100px; 
+        left: 0;
+        z-index: 50;
+        padding: 1rem;
+        border-bottom: 2px solid white;
+    }
+
+    .site-header {
+        position: relative; /* Necesario para el posicionamiento del menú */
+    }
+}
+
+
+    main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Titulos de sección */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Contenedor Grid */
+.rutina-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Estilo Tarjeta */
+.rutina-card {
+    background: rgba(97, 20, 20, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.rutina-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: #f78e05; 
+}
+
+.rutina-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #f78e05;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+.btn-leer {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #f78e05;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-leer:hover {
+    background-color: #fff;
+    color: #611414;
+}
+
+/* Contenedor Grid de Instructores */
+.instructores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center; 
+}
+
+.instructores-card {
+    background: transparent; 
+    padding: 2rem;
+    text-align: center;
+    max-width: 300px;
+}
+
+/*círculo */
+.img-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%; 
+    border: 4px solid #f78e05; 
+    overflow: hidden; /* Corta la imagen sobrante */
+    box-shadow: 0 0 15px rgba(247, 142, 5, 0.3);
+    transition: transform 0.3s ease;
+}
+
+
+/*Foto no se distorciona*/
+.instructor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Efecto al pasar el mouse */
+.instructores-card:hover .img-container {
+    transform: scale(1.05);
+    border-color: #fff; 
+}
+
+.instructores-card h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.instructores-card p {
+    font-style: italic;
+    color: #bbb;
+}
+
+
+/* pie */
+#pie{
+    width: 100%;
+    height: 90px;
+    background: #611414;
+}
+
+#pie #centro-pie{
+    width: 800px; /* Este ancho fijo puede causar problemas en pantallas muy pequeñas (<800px) */
+    max-width: 100%; /* Añade esto para mayor seguridad */
+    height: auto; 
+    overflow: hidden;
+    margin: auto;
+}
+
+.email{
+    color: #fff;
+    text-decoration: none;
+}

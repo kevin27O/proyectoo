@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner de carga 02</title>
+ 
+    <link rel="stylesheet" href="css/cubo.css">
+    <meta http-equiv="refresh" content="1; url=index.html">
+</head>
+<body>
+
+    <div id="contenedor_carga">
+        <div id="cubo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <h1>Cargando</h1>
+        <p>......</p>
+
+
+        <script>
+            window.onload = function () {
+                var contenedor = document.getElementById('contenedor_carga');
+                
+                contenedor.style.visibility = 'hidden';
+                contenedor.style.opacity = '0';
+        }
+        </script>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+    <!-- Enlace a tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="css/contacto.css"> 
+    <!-- Inclusión de Tailwind CSS y Google Fonts via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="img/logofitnes.png" alt="Logo Piru GYM" class="logo-img">
+            <div id="logo-text">
+                <h2>Bienvenidos</h2>
+                <p>Entrena con nosotros</p>
+            </div>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <nav class="main-nav">
+            <ul class="nav-list hidden md:flex" id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="gimnasio.html">Gimnasios</a></li>
+                <li><a href="#">Inscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto-wrapper">
+        <section class="form-container">
+        </form>
+
+        <section class="contacto-section">
+    <div class="form-container">
+        <h2 class="text-3xl font-bold text-center mb-2">¡ÚNETE AL EQUIPO!</h2>
+        <p class="text-center text-gray-200 mb-8 text-sm">Transforma tu vida en Piru GYM Santa Ana.</p>
+        
+        <form action="#" method="POST" class="gym-form">
+            <div class="input-group">
+                <label for="nombre">Nombre Completo</label>
+               <br> <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
+            </div>
+<br>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="input-group">
+                    <label for="correo">Correo</label>
+                    <br><input type="email" id="correo" name="correo" placeholder="tu@email.com" required>
+                </div>
+                <br>
+                <div class="input-group">
+                    <label for="celular">Celular</label>
+                  <br>  <input type="tel" id="celular" name="celular" placeholder="7777-7777" required>
+                </div>
+            </div>
+<br>
+            <div class="input-group">
+                <label for="plan">Plan de Interés</label>
+              <br>  <select id="plan" name="plan">
+                    <option value="" disabled selected>Selecciona un plan</option>
+                    <option value="pesas">Fuerza Total</option>
+                    <option value="cardio">Resistencia Cardio</option>
+                    <option value="funcional">Entreno Funcional</option>
+                </select>
+            </div>
+<br>
+            <div class="input-group">
+                <label for="mensaje">¿Tienes alguna duda?</label>
+                <br>
+                <br>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+<br><br>
+            <button type="submit" class="btn-gym w-full mt-4">GUARDAR INSCRIPCIÓN</button>
+        </form>
+    </div>
+</section>
+
+
+    </main>
+
+   <script src="js/script.js" defer></script>
+
+    <div id="pie">
+        <div id="centro-pie">
+            <center>
+                <p>
+                    &copy; Todos los Derechos Reservados <br>
+                    Diseñado por: <a href="mailto: kevin.ocgarcia@gmail.com" class="email">Tec. Campos</a> - 2025
+                </p>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
