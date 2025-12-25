@@ -137,6 +137,57 @@ body::before {
     color: #ffffff;
 }
 
+/* Sección de Video */
+.video-section {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    background: rgba(97, 20, 20, 0.8); 
+    border: 2px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 1000px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+/*medidas */
+.video video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #ffffff;
+    color: #611414;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f78e05;
+    color: white;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .video-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
 /* pie */
 #pie{
     width: 100%;
@@ -156,3 +207,4 @@ body::before {
     color: #fff;
     text-decoration: none;
 }
+

@@ -43,7 +43,7 @@
         <ul class="nav-list hidden md:flex" id="nav-menu">
             <li><a href="#">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="gimnasio.html">Gimnasios</a></li>
+            <li><a href="gimnasio.html">Gimnasio</a></li>
             <li><a href="contacto.html">Inscripción</a></li>
         </ul>
     </nav>
@@ -182,12 +182,11 @@
 
     <script src="js/script.js" defer></script>
 <script>
-        // Script para ocultar el spinner cuando cargue la página
+        // Script para ocultar el spinner
         window.addEventListener('load', function() {
             const loader = document.getElementById('contenedor_carga');
             loader.style.opacity = '0';
             loader.style.visibility = 'hidden';
-            // Le damos un poco de tiempo para la transición de opacidad
             setTimeout(() => {
                 loader.style.display = 'none';
             }, 600);
