@@ -1,4 +1,55 @@
 
+
+/* --- ESTILOS DEL SPINNER (CUBO) --- */
+#contenedor_carga {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Fondo sólido para que no se vea el gym mientras carga */
+    z-index: 10000;
+    transition: all 0.6s ease;
+}
+
+#cubo {
+    width: 4em;
+    height: 4em;
+    transform-style: preserve-3d;
+    animation: rotar 7s linear infinite;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cubo > span {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    border: 2px solid #611414;
+    box-shadow: inset 0px 0px 15px 5px rgba(230, 26, 3, 0.2), 0px 0px 40px 1px rgba(226, 23, 23, 0.15);
+    border-radius: 4px;
+}
+
+/* Posiciones del cubo */
+#cubo > span:nth-child(1){transform: rotateY(90deg) translateZ(2em);}
+#cubo > span:nth-child(2){transform: rotateY(90deg) translateZ(-2em);}
+#cubo > span:nth-child(3){transform: rotateX(90deg) translateZ(2em);}
+#cubo > span:nth-child(4){transform: rotateX(90deg) translateZ(-2em);}
+#cubo > span:nth-child(5){transform: translateZ(-2em);}
+#cubo > span:nth-child(6){transform: translateZ(2em);}
+
+@keyframes rotar {
+    0% { transform: rotateY(0deg) rotateX(0deg); }
+    100% { transform: rotateY(360deg) rotateX(360deg); }
+
+}
+
 /* Reset básico */
 *{
     margin: 0;
