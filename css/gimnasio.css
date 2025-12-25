@@ -188,9 +188,9 @@ body::before {
     }
 }
 
-
+/* redes */
 .redes-sociales-container {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    background-color: rgba(0, 0, 0, 0.5); 
     padding: 20px 0;
     text-align: center;
     border-top: 1px solid #611414;
@@ -218,13 +218,12 @@ body::before {
     display: inline-block;
 }
 
-/* Colores de marca al pasar el mouse */
 .social-link-out:hover {
     transform: scale(1.2);
-    color: #f78e05; /* El naranja de tus enlaces */
+    color: #f78e05; 
 }
 
-/* Color específico por red al hacer hover (opcional) */
+/* Color específico por red  */
 .social-link-out:hover .fa-facebook-f { color: #1877F2; }
 .social-link-out:hover .fa-instagram { color: #E4405F; }
 .social-link-out:hover .fa-whatsapp { color: #25D366; }
